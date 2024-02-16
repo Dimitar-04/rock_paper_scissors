@@ -18,10 +18,32 @@
             const arr=["rock","paper","scissors"];
             let index=random(3);
             let comp=arr[index];
-            console.log(comp);
+            return comp;
 
         }
-        console.log(getComputerChoice());
+        function playRound(playerSelection, computerSelection)
+        {
+            let human=playerSelection.toLowerCase();
+            let pc=computerSelection;
+            if(human == 'rock')
+            {
+                if(pc == 'paper')
+                {
+                   return (`You loose ${pc} beats ${human}`);
+                }
+                else if(pc == 'scissors')
+                {
+                    return (`You win ${human} beats ${pc}`);
+                }
+                else{
+                        return ('Draw');
+                }
+            }
+
+        }
+        const playerSelection='rock';
+        let computerSelection=getComputerChoice();
+        console.log(playRound(playerSelection,computerSelection))
     </script>
 </body>
 </html>
