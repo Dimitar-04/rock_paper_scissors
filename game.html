@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock,Paper,Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body id="bod">
-    
+    <div class="head">
+        <h1>Let's Play Rock,Paper,Scissors!</h1>
+    </div>
     <script>
         let num=3;
         function random(num)
@@ -74,23 +77,30 @@
         let playerScore=0;
         let pcScore=0;
         const bod=document.querySelector('#bod');
+        const drzac=document.createElement('div');
+        drzac.classList.add('drzac');
+        bod.appendChild(drzac);
         let btn1=document.createElement('button');
         btn1.textContent='Rock';
-        bod.appendChild(btn1);
+        btn1.classList.add('btnclass')
+        drzac.appendChild(btn1);
         
         let btn2=document.createElement('button');
         btn2.textContent='Paper';
-        bod.appendChild(btn2);
+        btn2.classList.add('btnclass');
+        drzac.appendChild(btn2);
         
         let btn3=document.createElement('button');
         btn3.textContent='Scissors';
-        bod.appendChild(btn3);
+        btn3.classList.add('btnclass');
+        drzac.appendChild(btn3);
         
         let container=document.createElement('div');
         container.classList.add('container');
         bod.appendChild(container);
         
-      
+        let score=document.createElement('p');
+        container.appendChild(score);
         
         
         btn1.addEventListener('click',()=>{
@@ -98,14 +108,11 @@
             let res=playRound(p,getComputerChoice());
             if (res==='Win'){playerScore++}
             else{pcScore++}
-            let score=document.createElement('p');
-            container.appendChild(score);
             score.textContent=`${playerScore}:${pcScore}`;
-            let br=document.createElement('br');
-            container.appendChild(br);
             if(pcScore===5 || playerScore===5)
             {
                 let answer=document.createElement('p');
+                answer.classList.add('para');
                 if(pcScore===5)
             {
                 answer.textContent='You Loose!';
@@ -126,13 +133,10 @@
             let res=playRound(p,getComputerChoice());
             if(res==='Win'){playerScore++}
             else{pcScore++}
-            let score=document.createElement('p');
-            container.appendChild(score);
             score.textContent=`${playerScore}:${pcScore}`;
-            let br=document.createElement('br');
-            container.appendChild(br);
             if(pcScore===5 || playerScore===5)
             { let answer=document.createElement('p');
+                answer.classList.add('para');
                 if(pcScore===5)
             {
                 answer.textContent='You Loose!';
@@ -152,14 +156,11 @@
             let res=playRound(p,getComputerChoice());
             if(res==='Win'){playerScore++}
             else{pcScore++}
-            let score=document.createElement('p');
-            container.appendChild(score);
             score.textContent=`${playerScore}:${pcScore}`;
-            let br=document.createElement('br');
-            container.appendChild(br);
             if(pcScore===5 || playerScore===5)
             {
                 let answer=document.createElement('p');
+                answer.classList.add('para');
                 if(pcScore===5)
             {
                 answer.textContent='You Loose!';
