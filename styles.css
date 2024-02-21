@@ -1,0 +1,45 @@
+*{
+    background-color: bisque;
+    font-family: 'Courier New', monospace;
+}
+.btnclass{
+    background-color: aliceblue;
+    color: #db6969;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 17px;
+    width: 200px;
+    
+}
+.head{
+    display: flex;
+    background-color: azure;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 25px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.head h1{
+    background-color: azure;
+}
+.drzac{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    
+}
+.para{
+    font-weight: 800;
+    font-size: 30px;
+}
